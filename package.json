@@ -1,6 +1,6 @@
 {
-  "name": "node-red-base58",
-  "version": "0.0.1",
+  "name": "base58-nodes",
+  "version": "0.0.2",
   "description": "Custom node for Node-Red automation.",
   "main": "index.js",
   "node-red": {
@@ -22,10 +22,10 @@
   "author": "JustMVG",
   "license": "ISC",
   "dependencies": {
-    "bs58": "*"
+    "bs58": "^4.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justmvg/node-red-base58.git"
+    "url": "https://github.com/justmvg/node-red-contrib-base58.git"
   }
 }
