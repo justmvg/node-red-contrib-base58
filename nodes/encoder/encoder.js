@@ -8,7 +8,8 @@ module.exports = function (RED) {
         node.on('input', (msg) => {
             const bytes = Buffer.from(msg.payload, 'hex')
             const result = bs58.encode(bytes)
-            msg.payload = result
+            
+            msg.payload.encoded = result
             node.send(msg);
         })
     }

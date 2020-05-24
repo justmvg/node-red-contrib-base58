@@ -9,7 +9,7 @@ module.exports = function (RED) {
             const bytes = bs58.decode(msg.payload)
             let result = bytes.toString('hex')
 
-            msg.payload = result
+            msg.payload.decoded = result
             node.send(msg);
         })
     }
