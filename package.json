@@ -1,6 +1,6 @@
 {
   "name": "base58-nodes",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Custom node for Node-Red automation.",
   "main": "index.js",
   "node-red": {

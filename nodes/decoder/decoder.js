@@ -6,7 +6,7 @@ module.exports = function (RED) {
         let node = this
 
         node.on('input', (msg) => {
-            if(typeof msg.payload === 'Object' && typeof msg.payload.hash === 'String'){
+            if(typeof msg.payload === 'object' && typeof msg.payload.hash === 'string'){
             const bytes = bs58.decode(msg.payload.hash)
             let result = bytes.toString('hex')
 
