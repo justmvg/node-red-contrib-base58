@@ -6,11 +6,11 @@ module.exports = function (RED) {
         let node = this
 
         node.on('input', (msg) => {
-            if(typeof msg.payload === 'String'){
-            const bytes = Buffer.from(msg.payload, 'hex')
+            if(typeof msg.payload.hash === 'String'){
+            const bytes = Buffer.from(msg.payload.hash, 'hex')
             const result = bs58.encode(bytes)
 
-            msg.payload.encoded = result
+            msg.encoded = result
             node.send(msg);
             }else {
                 this.warn("Input is not of type String.");
