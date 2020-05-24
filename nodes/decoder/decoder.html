@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Base58 to HEX', {
+        category: 'Base58',
+        color: '#F3B567',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "hash.png",
+        label: function () {
+            return this.name || "Base58 to HEX";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Base58 to HEX">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Base58 to HEX">
+    <p>A node that decodes your base58 input to hex.</p>
+</script>
