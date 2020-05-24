@@ -5,8 +5,8 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config)
         let node = this
 
-        node.on('input', (input) => {
-            const bytes = bs58.decode(input)
+        node.on('input', (msg) => {
+            const bytes = bs58.decode(msg.payload)
             let result = bytes.toString('hex')
 
             msg.payload = result
